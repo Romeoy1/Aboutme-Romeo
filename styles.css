@@ -1,0 +1,16 @@
+* {
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: large;
+  font-family: "Gill Sans";
+  color: rgb(168, 40, 201);
+}
+.secondh1 {
+  color: red;
+}
+#thirdh1 {
+  color: aqua;
+  font-size: large;
+}

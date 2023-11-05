@@ -1,16 +1,21 @@
 * {
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 h1 {
-  font-size: large;
+  font-size: xx-large;
   font-family: "Gill Sans";
-  color: rgb(168, 40, 201);
+  color: indigo;
 }
 .secondh1 {
-  color: red;
+  color: tomato;
 }
 #thirdh1 {
-  color: aqua;
+  color: blue;
   font-size: large;
+}
+
+.troll {
+  color: red;
+  font-size: 100%;
 }

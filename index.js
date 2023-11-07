@@ -33,6 +33,8 @@ let z = x + y;
 
 let b = 1000000;
 
+let xxxxxx = 10;
+
 console.log(2 ** 4);
 
 // String sequnce of characters
@@ -62,7 +64,7 @@ let num2 = "20";
 
 console.log(num + num2);
 
-const numb3 = 10;
+const yummyFood3 = 10;
 
 // console.log(numb3); prints to the console
 

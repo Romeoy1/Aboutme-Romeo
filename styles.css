@@ -4,9 +4,9 @@
 
 h1 {
   font-size: 25px;
-  font-family: ;
+  font-family:;
 }
- @keyframes [last h1] {
+ @keyframes [Troll] {
   style 
  }
 
@@ -14,7 +14,9 @@ h1 {
   margin-left: 831px;
 }
 
+
 @keyframes popup{
+  
   from{
     transform: translatex(0%);
   }
@@ -23,4 +25,5 @@ h1 {
       transform: translatex(100%);
     }
   }
+
 }

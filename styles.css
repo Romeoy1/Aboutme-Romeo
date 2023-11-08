@@ -1,10 +1,10 @@
 * {
-  border: 1px solid white;
+  border:
 }
 
 h1 {
-  font-size: xx-large;
-  font-family: "Gill Sans";
+  font-size: 25px;
+  font-family: ;
 }
  @keyframes [last h1] {
   style 
@@ -14,5 +14,13 @@ h1 {
   margin-left: 831px;
 }
 
-
-/* background */
+@keyframes popup{
+  from{
+    transform: translatex(0%);
+  }
+  to{
+    to{
+      transform: translatex(100%);
+    }
+  }
+}

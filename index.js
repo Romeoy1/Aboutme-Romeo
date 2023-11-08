@@ -72,7 +72,7 @@ const yummyFood3 = 10;
 
 // Truthy - anything with value
 // 1
-// 'Great'
+// 'String'
 // true
 // Falsy - undefined; no value
 //0
@@ -82,3 +82,41 @@ const yummyFood3 = 10;
 // null
 
 console.log(Boolean("1000"));
+
+let example = "Romo";
+
+let sentence5 = `Hi my name is ${example} and i am ${number}`;
+console.log(sentence5);
+
+// what is an array?
+
+const emptyArr = [];
+console.log(emptyArr);
+const lengthOfEmptyArray = emptyArr.length;
+console.log(lengthOfEmptyArray);
+
+const mixArr = [1, "Collin"];
+console.log(mixArr);
+
+const nameArr = ["Lucycan", "Collin", "Mark"];
+console.log(nameArr);
+const lengthOfNameArray = nameArr.length;
+console.log(lengthOfNameArray);
+
+const Hello = `Hi my name is ${nameArr[1]}`;
+console.log(Hello);
+
+console.log(nameArr[2]);
+
+const push = nameArr.push("Cortez");
+console.log(push);
+console.log(nameArr.push("Mai"));
+nameArr.push("Jet");
+console.log(nameArr);
+
+console.log(nameArr.pop());
+
+// how to index the last element
+const A = ["aa", "bb", 12, "kk", 2];
+const B = A[A.length - 1];
+console.log(B);

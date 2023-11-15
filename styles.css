@@ -20,10 +20,10 @@ h1 {
   from{
     transform: translatex(0%);
   }
-  to{
+  to{ 
     to{
       transform: translatex(100%);
     }
   }
-
+ 
 }

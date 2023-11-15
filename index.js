@@ -192,7 +192,7 @@ while (j < 5) {
   j++;
 }
 
-let word = "name";
+let word = "a";
 let attempts = 0;
 let arr5 = [];
 let characters = "abcdefghijklnmopqrstuvwxyz";
@@ -226,3 +226,24 @@ while (f < HW.length) {
 // loose equal == don't account for data type,
 // strict equal === account for data type
 //
+let input = prompt("What is your name");
+let input2 = prompt("What is your age?");
+console.log(input);
+alert(
+  "Hi my name is" +
+    " " +
+    input +
+    " " +
+    " and I am" +
+    " " +
+    input2 +
+    " " +
+    "years old"
+);
+// another way is alert(`Hi my name is ${input} and i am ${input2} years old`)
+
+let guess = prompt("Guess a number");
+while (guess != "3") {
+  guess = prompt("Guess the number");
+}
+alert("You guessed correctly!");

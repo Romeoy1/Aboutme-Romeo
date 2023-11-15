@@ -1,29 +1,27 @@
 * {
-  border:
+  border: ;
 }
 
-h1 {
+.h1 {
   font-size: 25px;
-  font-family:;
+  font-family: ;
 }
- @keyframes [Troll] {
-  style 
- }
+
+.h2 {
+  font-size: 50px;
+}
 
 .romeo09 {
   margin-left: 831px;
 }
 
-
-@keyframes popup{
-  
-  from{
+@keyframes slidein {
+  from {
     transform: translatex(0%);
   }
-  to{ 
-    to{
+  to {
+    to {
       transform: translatex(100%);
     }
   }
- 
 }

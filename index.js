@@ -242,8 +242,74 @@ alert(
 );
 // another way is alert(`Hi my name is ${input} and i am ${input2} years old`)
 
-let guess = prompt("Guess a number");
-while (guess != "3") {
-  guess = prompt("Guess the number");
+let guess = prompt("Guess a number between 1-15");
+while (guess != "15") {
+  guess = prompt("HAHA YOU'RE WRONG! TRY AGAIN!");
 }
 alert("You guessed correctly!");
+
+// sometimes we want to just check if a variable has a value
+if (f) {
+  console.log("this code block will execute");
+} else {
+  console.log("this is the false block");
+}
+if (j) {
+  //if j is truthy
+  console.log(j === "hi");
+}
+
+if (x === "hello i.c stars") {
+  console.log("this is true"); //this will not run if false
+} else {
+  console.log("this is false");
+}
+
+let ranNum = Math.floor(Math.random() * 3);
+console.log(ranNum);
+
+if (ranNum === 0) {
+  console.log("Zero is your random Number");
+  // something happens here
+} else if (ranNum === 1) {
+  console.log("One is your random Number");
+  // something happens here
+} else if (ranNum === 2) {
+  console.log("Two is your random Number");
+  // something happens here
+}
+
+const paragraph = document.querySelector(".Troll");
+console.log(paragraph);
+if (paragraph.classList[0] == "paragraph") {
+  paragraph.innerHTML = "Rick Rolled";
+}
+
+// logical and operator
+
+if (ranNum === 0 && str) {
+  console.log(
+    "both these expressions have to be truthy for this code block to run"
+  );
+} else {
+  console.log("one or both expressions are false");
+}
+
+// logical or operator
+if (ranNum === 0 || o) {
+  // can be the same
+  console.log("Only one of these needs to be true for this truth block to run");
+} else {
+  console.log("everything else here needs to be false");
+}
+//Block scope
+if (ranNum === 0) {
+  let staff0 = "Lucycan";
+  console.log(staff0);
+} else if (ranNum === 1) {
+  let staff1 = "Collin"; // wont show up because its not logged
+} else if (ranNum === 2) {
+  let staff2 = "Mark";
+  console.log(staff2);
+}
+//0 and 2 is expected to be logged because it was logged

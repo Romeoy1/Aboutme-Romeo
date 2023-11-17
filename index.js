@@ -262,7 +262,7 @@ if (j) {
 if (x === "hello i.c stars") {
   console.log("this is true"); //this will not run if false
 } else {
-  console.log("this is false");
+  console.log("this is false"); // this is where the false block is
 }
 
 let ranNum = Math.floor(Math.random() * 3);
@@ -313,3 +313,20 @@ if (ranNum === 0) {
   console.log(staff2);
 }
 //0 and 2 is expected to be logged because it was logged
+
+yy === 2 ? console.log("even") : console.log("odd");
+
+debugger;
+let dudes = ["Romeo", "Jet", "Peter", "Uswin", "Alex"];
+console.log(dudes);
+let ii = "Hello";
+if (1 === "Hello") console.log(dudes);
+for (let ii = 0; ii < dudes.length; ii++) {
+  if (dudes[ii] === "Jet") {
+    console.log(`Hello ${dudes[ii]}. How are you.`);
+    break;
+  } else {
+    console.log(`${dudes[ii]}`);
+  }
+}
+console.log(dudes[2]);

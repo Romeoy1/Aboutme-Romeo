@@ -5,6 +5,8 @@ const choiceButtons = document.querySelectorAll(".choiceButton");
 let player;
 let computer;
 let result;
+// ID selector ^
+// Button Functions
 choiceButtons.forEach((button) =>
   button.addEventListener("click", () => {
     player = button.textContent;
@@ -14,6 +16,7 @@ choiceButtons.forEach((button) =>
     resultText.textContent = checkWinner();
   })
 );
+// Computer Choices
 function computerTurn() {
   const randNum = Math.floor(Math.random() * 3) + 1;
   switch (randNum) {
@@ -28,14 +31,15 @@ function computerTurn() {
       break;
   }
 }
+// The results
 function checkWinner() {
   if (player == computer) {
     return "Draw!";
-  } else if (computer == "ROCK") {
-    return player == "PAPER" ? "!You Win!" : "!You Lost!";
-  } else if (computer == "PAPER") {
-    return player == "SCISSORS" ? "!You Win!" : "!You Lost!";
-  } else if (computer == "SCISSORS") {
-    return player == "ROCK" ? "!You Win!" : "!You Lost!";
+  } else if (computer === "ROCK") {
+    return player === "PAPER" ? "!You Win!" : "!You Lost!";
+  } else if (computer === "PAPER") {
+    return player === "SCISSORS" ? "!You Win!" : "!You Lost!";
+  } else if (computer === "SCISSORS") {
+    return player === "ROCK" ? "!You Win!" : "!You Lost!";
   }
 }

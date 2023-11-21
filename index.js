@@ -1,6 +1,7 @@
 // /// VARIABLES - containers for data used for later
 
 // /// let - are mutable / change
+/// box scope
 // let number = 15;
 
 // number = 10;
@@ -8,12 +9,14 @@
 // console.log(number);
 
 // /// const - immutable/connot change
+/// box scope
 // const name = "Romeo";
 
 // /// name = "Mai";
 
 // /// var - just like let
 // /// arent going to use
+/// is gobal scope
 
 // /// variable declarations
 
@@ -332,33 +335,82 @@
 // console.log(dudes[2]);
 
 /// userinput, choices array, computerInput
-let userInput123 = prompt("Choose rock, paper, or scissors");
-let choice123 = ["rock", "paper", "scissors"];
-let bot123 = choice123[Math.floor(Math.random() * choice123.length)];
-let userInput123score = 0;
-let bot123score = 0;
-while (userInput123score === 5 && bot123score === 5) {
-  if (bot123 === userInput123) {
-    console.log(`User: ${userInput123} | Bot: ${bot123} | You Tied!`);
-  } else if (
-    (userInput123 == "rock" && bot123 == "paper") ||
-    (userInput123 == "paper" && bot123 == "scissors") ||
-    (userInput123 == "scissors" && bot123 == "rock")
-  ) {
-    console.log(`User picked ${userInput123}`);
-    console.log(`User: ${userInput123} | Bot: ${bot123} | You Lose!`);
-    bot123score++;
-  } else userInput123++;
-}
-if (bot123score === 5) {
-  console.log("Bot wins");
-} else {
-  console.log("You win");
-}
-// function addNumbers(a,b){
-// return a + b
+
+// / a reuseable code
+// function addNumbers(a,b){ // input
+// return a + b //output
 // }
 // addNumbers(2,3)
 // let result = addNumbers(5,5)
 // console.log(addNumbers(5,10))
 // console.log(result)
+// function addString(str1, str2) {
+//   return str1 + str2;
+// }
+// let combination = addString("Romeo", "Yang");
+// console.log(combination);
+
+// let name = function (a, b) {
+//   ///expression function
+
+//   name(1, 5);
+// };
+// function name2() {
+//   ///regular function
+// }
+// let name3 = (a, b) => {
+//   return a + b;
+// }; /// Arrow function
+// function loopArray(arr) {
+//   for (char of arr) {
+//     console.log(char);
+//   }
+// }
+// let nums = [1, 2, 3, 4];
+// let names = ["Romeo", "Yang", "Mai", "Hli"];
+// loopArray(nums);
+// loopArray(names);
+
+// let ventingMachine = (money, item) => {
+//   let snacks = [
+//     "Pepsi",
+//     "Hershey",
+//     "Snicker",
+//     "Reeses",
+//     "Cheetose",
+//     "Coke",
+//     "Water",
+//   ];
+//   if (money === "$2.00") {
+//     for (food of snacks) {
+//       if (item === food) {
+//         return `You picked ${food}`;
+//       }
+//     }
+//     return `${item} Doesn't Exist`;
+//   }
+// };let
+// console.log(ventingMachine("$2.00", "Hershey"));
+function playRockPaperScissors() {
+  let userChoice = prompt("Rock, paper, or scissors");
+  let validChoices = ["rock", "paper", "scissors"];
+  if (!validChoices.includes(userChoice)) alert("Wrong input. Try again");
+  let botChoices = ["rock", "paper", "scissors"];
+  let botChoice = botChoices[Math.floor(Math.random() * 3)];
+  console.log(`You Chose ${userChoice}`);
+  console.log(`Bot Chose ${botChoice}`);
+
+  if (userChoice === botChoice) {
+    return "Tie";
+  } else if (
+    (userChoice === "rock" && botChoice === "scissors") ||
+    (userChoice === "paper" && botChoice === "rock") ||
+    (userChoice === "scissors" && botChoice === "paper")
+  ) {
+    return "You won";
+  } else {
+    return "Bot has won";
+  }
+}
+let result = playRockPaperScissors();
+console.log(result);

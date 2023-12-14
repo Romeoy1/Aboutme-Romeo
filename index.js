@@ -8,7 +8,7 @@
 
 // console.log(number);
 
-// /// const - immutable/connot change
+// /// const - immutable/cannot change
 /// box scope
 // const name = "Romeo";
 
@@ -391,26 +391,33 @@
 //   }
 // };let
 // console.log(ventingMachine("$2.00", "Hershey"));
-function playRockPaperScissors() {
-  let userChoice = prompt("Rock, paper, or scissors");
-  let validChoices = ["rock", "paper", "scissors"];
-  if (!validChoices.includes(userChoice)) alert("Wrong input. Try again");
-  let botChoices = ["rock", "paper", "scissors"];
-  let botChoice = botChoices[Math.floor(Math.random() * 3)];
-  console.log(`You Chose ${userChoice}`);
-  console.log(`Bot Chose ${botChoice}`);
+// function playRockPaperScissors() {
+//   let userChoice = prompt("Rock, paper, or scissors");
+//   let validChoices = ["rock", "paper", "scissors"];
+//   if (!validChoices.includes(userChoice)) alert("Wrong input. Try again");
+//   let botChoices = ["rock", "paper", "scissors"];
+//   let botChoice = botChoices[Math.floor(Math.random() * 3)];
+//   console.log(`You Chose ${userChoice}`);
+//   console.log(`Bot Chose ${botChoice}`);
 
-  if (userChoice === botChoice) {
-    return "Tie";
-  } else if (
-    (userChoice === "rock" && botChoice === "scissors") ||
-    (userChoice === "paper" && botChoice === "rock") ||
-    (userChoice === "scissors" && botChoice === "paper")
-  ) {
-    return "You won";
-  } else {
-    return "Bot has won";
-  }
+//   if (userChoice === botChoice) {
+//     return "Tie";
+//   } else if (
+//     (userChoice === "rock" && botChoice === "scissors") ||
+//     (userChoice === "paper" && botChoice === "rock") ||
+//     (userChoice === "scissors" && botChoice === "paper")
+//   ) {
+//     return "You won";
+//   } else {
+//     return "Bot has won";
+//   }
+// }
+// let result = playRockPaperScissors();
+// console.log(result);
+let a = " ";
+let name = "ME";
+let x = name.length - 1;
+while (x > 0) {
+  a.push(name[x]);
+  x--;
 }
-let result = playRockPaperScissors();
-console.log(result);

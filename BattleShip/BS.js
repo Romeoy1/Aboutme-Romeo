@@ -1,12 +1,12 @@
 let player1 = [
-  [1, 0, 1],
   [0, 0, 0],
-  [1, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
 ];
 let player2 = [
-  [0, 1, 0],
-  [1, 0, 0],
-  [0, 0, 1],
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
 ];
 let pr1 = prompt("choose your row");
 let pc1 = prompt("choose your column");

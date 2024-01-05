@@ -497,10 +497,4 @@ grabSubmitBtn.addEventListener("click", (e) => {
   );
   // clear values
   grabRatingInput.value = "";
-
-  // Change the color of the label for the first name
-  const grabRatingLabel = document.getElementById("ratingLabel");
-  grabRatingLabel.style.color = "red";
-  const x = document.createElement("p");
-  Console.log(x);
 });

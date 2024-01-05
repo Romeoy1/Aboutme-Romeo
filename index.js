@@ -414,10 +414,105 @@
 // }
 // let result = playRockPaperScissors();
 // console.log(result);
-let a = " ";
-let name = "ME";
-let x = name.length - 1;
-while (x > 0) {
-  a.push(name[x]);
-  x--;
+// let a = " ";
+// let name = "ME";
+// let x = name.length - 1;
+// while (x > 0) {
+//   a.push(name[x]);
+//   x--;
+// }
+// document.addEventListener("click", (e) => {
+//   // what react reads
+//   console.log("You Clicked");
+// });
+
+// function fncClicked() {
+//   console.log("This function was called down there");
+// }
+// document.addEventListener("click", (e) => {
+//   console.log(e);
+//   console.log("Like!");
+// });
+// document.addEventListener("click", (p) => {
+//   console.log(p);
+//   console.log("You have clicked anywhere in the document");
+// });
+// //first name
+// const grabfirstNameInput = document.getElementById("firstNameInput");
+// console.log(grabFirstNameInput);
+// //last name
+// const grablastNameInput = document.getElementById("lastNameInput");
+// console.log(grabLastNameInput);
+// //Birthday
+// const grabdateInput = document.getElementById("dateInput");
+// console.log(grabDateInput);
+// //The like button
+// const grabsubmitBtn = document.getElementById("submitBtn");
+// console.log(grabsubmitBtn);
+// // document.body.addEventListener("click", =>{
+// //     console.log()
+// // })
+// grabsubmitBtn.addEventListener("click", (e) => {
+//   e.preventDefault(); //to prevent it from refreshing the page
+//   console.log(grabFirstNameInput.value);
+//   console.log(grabLastNameInput.value);
+//   console.log(grabDateInput.value);
+//   // when wee click the like button the first name the paragraph will apprear
+//   // it will say "Lucy Ly, your birthday is 01/05/1979. Thank you for liking!"
+//   const paragraphElement = document.querySelector(".paragraph");
+//   console.log(paragraphElement);
+//   paragraphElement.innerHTML = `${grabFirstNameInput} ${grabLastNameInput} you're birthday is ${grabDateInput}. Thank you for liking! `;
+//   console.log(
+//     `${grabFirstNameInput} ${grabLastNameInput} you're birthday is ${grabDateInput}. Thank you for liking! `
+//   );
+// });
+
+// Get the range input element with the id "ratingInput"
+const grabRatingInput = document.getElementById("ratingInput");
+console.log(grabRatingInput);
+
+// Get the like button element with the id "submitBtn"
+const grabSubmitBtn = document.getElementById("submitBtn");
+console.log(grabSubmitBtn);
+
+// Define the updateScaleValue function outside the event listener
+function updateScaleValue() {
+  // Get the range input element with the id "scale"
+  const scaleInput = document.getElementById("scale");
+
+  // Get the span element with the id "scaleValue" to display the current value
+  const scaleValue = document.getElementById("scaleValue");
+
+  // Update the text content of the span to the current value of the range input
+  scaleValue.textContent = scaleInput.value;
 }
+
+// Add a click event listener to the like button
+grabSubmitBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // to prevent it from refreshing the page
+  console.log(grabRatingInput.value);
+
+  // Call the updateScaleValue function
+  updateScaleValue();
+
+  // When you click the like button, the first name paragraph will appear
+  const paragraphElement = document.querySelector(".paragraph");
+  console.log(paragraphElement);
+
+  paragraphElement.innerHTML = `You've rated my page ${grabRatingInput.value}. Thank you so much!`;
+
+  console.log(
+    `You've rated my page ${grabRatingInput.value}. Thank you so much!`
+  );
+
+  // Clear the value of the rating input
+  grabRatingInput.value = "";
+
+  // Change the color of the label for the rating
+  const grabRatingLabel = document.getElementById("ratingLabel");
+  grabRatingLabel.style.color = "red";
+
+  // Create a new paragraph element
+  const x = document.createElement("p");
+  console.log(x);
+});

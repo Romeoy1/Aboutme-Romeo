@@ -1,16 +1,5 @@
-.h1 {
-  font-size: 25px;
-}
-
-.h3 {
-  font-size: 50px;
-}
-
-.romeo09 {
-  margin-left: 831px;
-}
-
 body {
+  /*this it the photo of me*/
   margin: 0;
 }
 
@@ -29,7 +18,7 @@ body {
   object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
-@keyframes slidein {
+/* @keyframes slidein {
   from {
     transform: translatex(0%);
   }
@@ -38,4 +27,16 @@ body {
       transform: translatex(100%);
     }
   }
+}
+p {
+  color: white;
+}
+*/
+button {
+  color: black;
+  padding: 3px;
+}
+
+button:hover {
+  background-color: transparent;
 }

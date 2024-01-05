@@ -466,35 +466,26 @@
 //     `${grabFirstNameInput} ${grabLastNameInput} you're birthday is ${grabDateInput}. Thank you for liking! `
 //   );
 // });
-
-// Get the range input element with the id "ratingInput"
+// first name
 const grabRatingInput = document.getElementById("ratingInput");
 console.log(grabRatingInput);
-
-// Get the like button element with the id "submitBtn"
+// The like button
 const grabSubmitBtn = document.getElementById("submitBtn");
 console.log(grabSubmitBtn);
-
-// Define the updateScaleValue function outside the event listener
-function updateScaleValue() {
-  // Get the range input element with the id "scale"
-  const scaleInput = document.getElementById("scale");
-
-  // Get the span element with the id "scaleValue" to display the current value
-  const scaleValue = document.getElementById("scaleValue");
-
-  // Update the text content of the span to the current value of the range input
-  scaleValue.textContent = scaleInput.value;
-}
-
-// Add a click event listener to the like button
 grabSubmitBtn.addEventListener("click", (e) => {
   e.preventDefault(); // to prevent it from refreshing the page
   console.log(grabRatingInput.value);
 
-  // Call the updateScaleValue function
-  updateScaleValue();
+  function updateScaleValue() {
+    // Get the range input element with the id "scale"
+    const scaleInput = document.getElementById("scale");
 
+    // Get the span element with the id "scaleValue" to display the current value
+    const scaleValue = document.getElementById("scaleValue");
+
+    // Update the text content of the span to the current value of the range input
+    scaleValue.textContent = scaleInput.value;
+  }
   // When you click the like button, the first name paragraph will appear
   const paragraphElement = document.querySelector(".paragraph");
   console.log(paragraphElement);
@@ -504,15 +495,12 @@ grabSubmitBtn.addEventListener("click", (e) => {
   console.log(
     `You've rated my page ${grabRatingInput.value}. Thank you so much!`
   );
-
-  // Clear the value of the rating input
+  // clear values
   grabRatingInput.value = "";
 
-  // Change the color of the label for the rating
+  // Change the color of the label for the first name
   const grabRatingLabel = document.getElementById("ratingLabel");
   grabRatingLabel.style.color = "red";
-
-  // Create a new paragraph element
   const x = document.createElement("p");
-  console.log(x);
+  Console.log(x);
 });

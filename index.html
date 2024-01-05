@@ -62,19 +62,7 @@
       <p>Please rate my page on a scale from 1-10!</p>
       <form action="" id="mainform">
         <label for=""></label>
-        <label for="scale">Select a Number:</label>
-        <!-- Step attribute: Specifies the step or increment between values as 1. -->
-        <!-- Value attribute: Sets the initial value of the range to 5. -->
-        <!-- Onchange attribute: Calls the JavaScript function updateScaleValue() when the value changes. -->
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="1"
-          value="5"
-          onchange="updateScaleValue()"
-        />
-
+        <input type="text" name="" id="ratingInput" />
         <input type="submit" id="submitBtn" value="Thank you" />
       </form>
       <p class="paragraph"></p>

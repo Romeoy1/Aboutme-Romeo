@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+.gif {
+  width: 200px;
+}
+.Selfie {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  float: right;
+  width: "500px";
+}
+
+/* @keyframes slidein {
+  from {
+    transform: translatex(0%);
+  }
+  to {
+    to {
+      transform: translatex(100%);
+    }
+  }
+}
+p {
+  color: white;
+}
+*/

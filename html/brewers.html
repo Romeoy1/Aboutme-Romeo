@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Brewers Roster</title>
+    <link rel="stylesheet" href="/styles/brewers.css" />
   </head>
   <body>
-    <div id="d1">
-      <div class="Players" id="1">
-        <h1>Players</h1>
-      </div>
-    </div>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Player Name</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody id="brewersRosterList"></tbody>
+      </table>
+    </section>
+    <div id="playerStats"></div>
     <script src="/javascript/brewers.js"></script>
   </body>
 </html>

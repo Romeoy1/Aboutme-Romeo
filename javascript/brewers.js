@@ -448,21 +448,64 @@ let brewers = [
     birthCountry: "Dominican Republic",
   },
 ];
-const playersDiv = document.querySelector("#d1");
-console.log(playersDiv);
-//we added a event listener to listen for each click
-playersDiv.addEventListener("click", (e) => {
-  console.log("test");
-  console.log(e.target.closest(".players").id); //target just grabs the element we're grabbing
+// Function to populate the Brewers roster table
+function rosterTable() {
+  // Get the HTML element for the roster list
+  let rosterList = document.getElementById("brewersRosterList");
 
-  let id = e.target.closest(".players").id; //in the event object we grabbed the element that we clicked during that event
-  //we then grab the closest element to it that has the class user. after that we grab the id of that element as the id is the same as the employeeID
+  // Iterate through each player in the brewers array
+  brewers.forEach((player) => {
+    // Insert a new row for each player
+    let row = rosterList.insertRow();
 
-  let user = users.find((el) => {
-    //we have our users array and use the find method
-    //the find method grabs an element from an array that meets the conditions
-    //given
-    return el.playerID == id;
+    // Display player picture in a cell
+    let imgCell = row.insertCell();
+    let playerImage = document.createElement("img");
+    playerImage.src = player.picture;
+    playerImage.alt = player.firstName + " " + player.lastName;
+    imgCell.appendChild(playerImage);
+
+    // Display player name in a cell
+    let nameCell = row.insertCell();
+    nameCell.textContent = player.firstName + " " + player.lastName;
+
+    // Display player ID in a cell
+    let idCell = row.insertCell();
+    idCell.textContent = player.id;
+
+    // Attach click events to elements to show player stats
+    attachClickEvent(playerImage, player);
+    attachClickEvent(nameCell, player);
+    attachClickEvent(idCell, player);
   });
-  console.log(players);
-});
+}
+
+// Function to attach click event and show player stats
+function attachClickEvent(element, player) {
+  element.addEventListener("click", function () {
+    showPlayerStats(player);
+  });
+}
+
+// Function to show player stats
+function showPlayerStats(player) {
+  // Get the HTML element for player stats
+  let playerStatsDiv = document.getElementById("playerStats");
+
+  // Populate player stats in the playerStatsDiv
+  playerStatsDiv.innerHTML = `
+        <h2>${player.firstName} ${player.lastName} - Player Stats</h2>
+        <p>ID: ${player.id}</p>
+        <p>Position: ${player.primaryPosition}</p>
+        <p>Bat Side: ${player.batSide}</p>
+        <p>Throw Side: ${player.throwSide}</p>
+        <p>Number: ${player.number}</p>
+        <p>Birth City: ${player.birthCity}</p>
+        <p>Birth State/Province: ${player.birthStateProvince}</p>
+        <p>Birth Country: ${player.birthCountry}</p>
+        <img src="${player.picture}" alt="${player.firstName} ${player.lastName}"/>
+    `;
+}
+
+// Call the function to render the roster
+rosterTable();

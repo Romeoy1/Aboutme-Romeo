@@ -1,0 +1,8 @@
+#playerStats {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px; /* Add padding for better visibility */
+  background-color: white;
+  border: 1px solid #ccc;
+}
